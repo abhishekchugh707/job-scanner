@@ -1,0 +1,386 @@
+# Job Scanner settings. Edit freely; no code changes needed.
+# This example is set up for a Python / ML / backend profile looking for jobs in Germany.
+
+max_age_days: 2           # ignore postings older than this (override: python run.py --days 7)
+scan_every_minutes: 20    # your list of careers pages: every 20 min, so careers-page jobs reach you before LinkedIn
+daily_scan_hour: 7        # your LinkedIn network + open-data companies: read in the first scan after
+                          # this hour each day (or whenever the last full read is >24 h ago)
+first_read_days: 30       # a company read for the first time: its jobs from this many days count once
+
+open_data:                # weekly: find companies hiring your roles in Germany in the open dataset of
+  enabled: true           # github.com/Riley-Dorrington/job-board-aggregator (1.4M jobs, ~150 MB download)
+
+profile:                  # shown at the top of the dashboard
+  name: ""                # your name (optional)
+  headline: Python · ML · Backend
+  top_skills: [Python, FastAPI, Docker, PostgreSQL, PyTorch]
+
+home:                     # distance on each card is measured from here
+  name: Köln
+  lat: 50.9375
+  lon: 6.9603
+  near_km: 80             # "Near Köln" filter: this radius, plus remote jobs
+parallel_requests: 16     # how many feeds are read at the same time
+
+filters:
+  # A title must contain at least one of these (whole words, case-insensitive).
+  role_keywords:
+    - backend
+    - back-end
+    - python
+    - full stack
+    - full-stack
+    - fullstack
+    - software engineer
+    - software developer
+    - softwareentwickler
+    - software-entwickler
+    - entwickler
+    - developer
+    - machine learning
+    - ml engineer
+    - mlops
+    - ai engineer
+    - ai developer
+    - applied ai
+    - ki-entwickler
+    - llm
+    - data engineer
+    - data scientist
+    - analytics engineer
+    - platform engineer
+    - devops
+    - cloud engineer
+    - software development engineer
+    - forward deployed
+    - founding engineer
+    - product engineer
+    - research engineer
+    - agent engineer
+    - ai software
+    - site reliability
+    - sre
+
+  # A title containing any of these is dropped.
+  # Remove "senior" here if you want stretch roles too.
+  # A job found only by its skills (title without your role words) needs this many skill points
+  # for the Inbox; below that it waits in Low match. 0 = off.
+  skills_inbox_min_points: 8
+
+  exclude_title_words:
+    - senior
+    - sr.
+    - sr
+    - staff
+    - principal
+    - lead
+    - head
+    - director
+    - manager
+    - vp
+    - chief
+    - architect
+    - intern
+    - internship
+    - praktikum
+    - praktikant
+    - werkstudent
+    - working student
+    - student
+    - thesis
+    - abschlussarbeit
+    - masterarbeit
+    - bachelorarbeit
+    - masterand
+    - pflichtpraktikum
+    - studentische
+    - hilfskraft
+    - postdoc
+    - postdoctoral
+    - trainee
+    - leader
+    - teamlead
+    - teamleiter
+    - teamleitung
+    - leiter
+    - leitung
+    - freelance
+    - freelancer
+    - freiberuflich
+    - ausbildung
+    - ios
+    - android
+    - embedded
+    - firmware
+    - salesforce
+    - sales
+    - account executive
+
+  # Companies you never want to see, from any source (careers pages, LinkedIn, boards).
+  exclude_companies:
+    - sggovterp           # example: a non-German employer that slipped in from the open job data
+
+  accept_remote_eu: true    # keep "Remote (Europe/EU/Germany)" roles
+  extra_cities: []          # add towns the built-in list misses, e.g. [hürth, troisdorf]
+
+  # Skills from your CV and how much each counts (example values - replace with your own). In the job title a skill counts
+  # double; in the requirements once; only in a "nice to have" line, a third.
+  skills:
+    python: 3
+    fastapi: 4
+    mlops: 4
+    mlflow: 4
+    machine learning: 3
+    ml engineer: 3
+    forecasting: 4
+    time series: 3
+    energy: 3
+    energie: 3
+    renewable: 2
+    pytorch: 2
+    scikit-learn: 2
+    lightgbm: 2
+    xgboost: 2
+    tensorflow: 1
+    pandas: 1
+    llm: 2
+    ollama: 2
+    hugging face: 1
+    pydantic: 2
+    pytest: 2
+    docker: 2
+    kubernetes: 1
+    kafka: 2
+    spark: 2
+    pyspark: 2
+    flink: 2
+    airflow: 2
+    databricks: 2
+    snowflake: 1
+    bigquery: 1
+    postgresql: 2
+    postgres: 2
+    timescaledb: 3
+    mysql: 1
+    neo4j: 2
+    sql: 1
+    etl: 2
+    data pipeline: 2
+    data pipelines: 2
+    angular: 2
+    react: 2
+    typescript: 1
+    node.js: 1
+    graphql: 1
+    websocket: 1
+    websockets: 1
+    java: 2
+    spring boot: 2
+    ci/cd: 2
+    gitlab: 2
+    github actions: 1
+    aws: 1
+    azure: 1
+    linux: 1
+    oauth: 2
+    keycloak: 2
+    jwt: 1
+    api security: 3
+    microservices: 1
+    rest api: 1
+    rest apis: 1
+
+  # Core technologies you don't have (from your skills notes). If a job's title or
+  # requirements are built on them, the score drops and the card says so.
+  # In a "nice to have" line they don't count against the job.
+  not_my_skills:
+    rust: 4
+    c++: 3
+    c#: 2
+    .net: 2
+    go: 4
+    scala: 3
+    ruby: 4
+    rails: 4
+    php: 4
+    swift: 4
+    objective-c: 4
+    ios: 3
+    flutter: 3
+    vue: 3
+    vue.js: 3
+    nuxt: 3
+    computer vision: 4
+    opencv: 4
+    embedded: 4
+    firmware: 4
+    fpga: 4
+    vhdl: 4
+    verilog: 4
+    plc: 4
+    sps: 4
+    autosar: 4
+    cuda: 3
+    salesforce: 4
+    abap: 4
+    unity: 4
+    unreal engine: 4
+  max_gap_penalty: 14
+
+  # Description patterns that suggest a senior bar; they lower the score.
+  seniority_penalty:
+    - '\b([5-9]|1[0-9])\s*\+?\s*(years|yrs|jahre)'
+    - '\b(five|six|seven|eight|ten)\+?\s+years'
+
+  min_score: 6              # jobs scoring below this are dropped (see filtered_out_latest.csv)
+
+  # India: off by default. true = jobs in India get
+  # their own India tab again (also switch on the two jobspy_india boards below).
+  india: false
+  india_priority_cities: [Bengaluru, Bangalore, Hyderabad, Mumbai, Navi Mumbai, Pune]   # listed first
+  india_max_min_experience: 5   # Naukri says "2-5 Yrs": jobs asking for more than this minimum are dropped
+
+  # "Maybe" section: jobs whose title has none of your role_keywords but whose
+  # description scores at least this many skill points. Lower it to see more.
+  maybe_min_score: 10
+
+  # German check: jobs asking for C1/C2, fluent, verhandlungssicher, native,
+  # "sehr gute Deutschkenntnisse" etc. are always dropped. B2 / "gute" is kept
+  # with a warning. When a job's description can't be read at all, the check
+  # can't run:  separate = show those in their own section (default),
+  #             hide     = don't show them at all.
+  unchecked_jobs: separate
+
+# Job boards, read after the company feeds.
+boards:
+  arbeitsagentur:           # official Bundesagentur fuer Arbeit job board
+    enabled: true
+    days: 2
+    max_pages: 3           # 100 results per page
+    wo: ""                  # e.g. "Köln" to search around a city; empty = all of Germany
+    umkreis: 50
+    keywords:
+      - Python Entwickler
+      - Backend Developer
+      - Machine Learning Engineer
+      - MLOps Engineer
+      - Data Engineer
+      - Software Engineer Python
+      - KI Entwickler
+      - Softwareentwickler
+      - DevOps Engineer
+      - Site Reliability Engineer
+      - Wissenschaftlicher Mitarbeiter Machine Learning
+      - Wissenschaftlicher Mitarbeiter Künstliche Intelligenz
+
+  academics:                # research positions at German universities and institutes (academics.de):
+    enabled: true           # Wissenschaftliche Mitarbeiter, research associates, PhD positions in
+    days: 30                # computing / data / AI - shown in the Research tab. Open ads posted in
+    pages: 2                # the last 30 days count (university ads stay open for weeks).
+    lists: [informatik, wirtschaftsinformatik, mathematik, elektrotechnik]
+
+  arbeitnow:                # switched off (Nov 2026): it mostly re-lists jobs from other sites
+    enabled: false
+    pages: 5
+
+  jobspy:                   # LinkedIn / Indeed / Google Jobs via python-jobspy. Off by default: these sites
+    enabled: false          # limit automated reading - check their terms before switching it on. Sites: [linkedin, indeed, google]
+    sites: [linkedin]
+    location: Germany
+    hours_old: 24           # newest only: the last 24 hours (widened automatically after a gap)
+    min_hours_between_runs: 3   # read every 3 hours, not every scan (LinkedIn blocks when asked more often)
+    results:                # per search keyword
+      linkedin: 40
+      indeed: 100
+      google: 50
+    keywords:
+      - Python Backend Engineer
+      - Python Developer
+      - Machine Learning Engineer
+      - MLOps Engineer
+      - Data Engineer
+      - AI Engineer
+      - Backend Developer
+      - Software Engineer
+      - DevOps Engineer
+
+  berlinstartupjobs:        # berlinstartupjobs.com - startups post there themselves (few ads, all original)
+    enabled: true
+    feeds: [engineering]
+    days: 7                 # its jobs of the last week count (shown once)
+    min_hours_between_runs: 1
+
+  germantechjobs:           # germantechjobs.de - tech jobs posted by the companies, with salary
+    enabled: true
+    min_hours_between_runs: 2
+
+  # ---- Research tab: PhD positions, research associates, Wissenschaftliche Mitarbeiter -------------
+  # Each site is read every 3 hours; an ad counts if it was posted in the last 30 days and is about
+  # computing / data / AI. academics.de (above) is the general one; these add the employers directly.
+  bund:                     # service.bund.de - universities, Helmholtz centres, federal institutes (official feed)
+    enabled: true
+    days: 30
+    min_hours_between_runs: 3
+  fraunhofer:               # jobs.fraunhofer.de - research posts go to Research, engineering jobs to the Inbox
+    enabled: true
+    days: 30
+    min_hours_between_runs: 3
+    keywords: [machine learning, künstliche intelligenz, software, python, data science, doktorand]
+  dlr:                      # jobs.dlr.de - German Aerospace Center (headquarters in Köln)
+    enabled: true
+    days: 30
+    min_hours_between_runs: 3
+    keywords: [machine learning, künstliche intelligenz, software, python, data science, doktorand]
+  dfki:                     # German Research Center for Artificial Intelligence
+    enabled: true
+    days: 30
+    min_hours_between_runs: 3
+  rwth:                     # RWTH Aachen job portal
+    enabled: true
+    days: 30
+    min_hours_between_runs: 3
+  tum:                      # TU München, academic staff
+    enabled: true
+    days: 30
+    min_hours_between_runs: 3
+  daad:                     # DAAD PhDGermany - switched off: their server refuses the scanner (error 403),
+    enabled: false          # also with browser-like headers. Their PhD ads are mostly on academics.de too.
+    days: 30
+    min_hours_between_runs: 3
+
+  jobspy_india:             # India tab, slow lane: LinkedIn India (blocks quickly - every 3 hours).
+    enabled: false          # All of India in one search (the priority cities are sorted first in the tab)
+    sites: [linkedin]
+    locations: [India]
+    hours_old: 24           # newest only: the last 24 hours (widened automatically after a gap)
+    min_hours_between_runs: 3   # read every 3 hours, like LinkedIn/Indeed Germany (avoids blocks)
+    results:                # per search keyword
+      linkedin: 25
+      naukri: 50
+      indeed: 50
+    keywords:
+      - Python Backend Engineer
+      - Python Developer
+      - Machine Learning Engineer
+      - MLOps Engineer
+      - Data Engineer
+      - AI Engineer
+      - Backend Developer
+      - DevOps Engineer
+    broad_keywords:         # broad ones: Naukri and Indeed India only, not LinkedIn
+      - Software Developer
+      - Software Engineer
+      - Site Reliability Engineer
+
+  jobspy_india_fast:        # India tab, fast lane: Naukri + Indeed India - they block much less,
+    enabled: false          # so every hour. Same keywords, places and results as jobspy_india above.
+    sites: [naukri, indeed]
+    min_hours_between_runs: 1
+
+# Second opinion for jobs whose title has none of your role words: a small local AI model
+# (multilingual-e5-small, German + English, runs on the CPU, ~120 MB one-time download) that
+# compares the ad with your skills by meaning. Keyword skill points stay the main judge.
+# Cut-off chosen on your own answers if you add jobfinder/data/calibration.json (see README);
+# without it, keyword skill points decide alone.
+skills_model:
+  enabled: true

@@ -1,0 +1,3 @@
+-r requirements.txt
+pytest>=8.0
+pandas>=2.0          # used by the JobSpy tests

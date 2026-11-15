@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Your personal data - never commit
+jobs.db
+*.db
+seen_jobs.json
+network/
+output/
+*.log
+*.bak
+_private/
+jobfinder/data/calibration.json
+
+# State files the scanner writes while running
+companies_auto.yaml
+companies_auto_tried.json
+companies_discovered.yaml
+companies_network.yaml
+companies_lookup_queue.json
+company_suggestions.json
+network_probe.json
+opendata_index.json
+opendata_state.json
+semantic_state.json
+source_health.json
+why_cases.json
+
+# Downloaded skills model (fetched on first run)
+models/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.fuse_hidden*
+.idea/
+.vscode/

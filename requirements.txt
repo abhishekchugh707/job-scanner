@@ -1,0 +1,6 @@
+requests>=2.31
+PyYAML>=6.0
+
+# Optional: LinkedIn / Indeed / Google Jobs (boards.jobspy in config.yaml, off by default)
+# python-jobspy
+# Optional: the skills model installs numpy, onnxruntime, tokenizers and huggingface_hub itself on first use

@@ -1,0 +1,216 @@
+# Companies whose careers pages are read directly.
+# ats: greenhouse | lever | ashby | personio | smartrecruiters | recruitee | workable
+#      join | workday | eightfold | page
+# id:  the board name in their careers URL, e.g. jobs.lever.co/<id>
+#      workday: the full careers URL (https://<tenant>.wdN.myworkdayjobs.com/<site>)
+#      page:    a plain careers page URL; links one level below it count as jobs
+#      recruitee: subdomain, or the company's own careers domain (meet.zoi.tech)
+#
+# Add more:   python detect_ats.py "Company" https://company.com/careers
+# Test all:   python run.py --check
+#
+# Every entry below was found on a live careers URL in Oct 2026. Greenhouse,
+# Lever, Ashby and SmartRecruiters feeds were tested live; Personio feeds can
+# be switched off by the company - run --check once and delete any that fail.
+
+# --- Energy / climate tech (closest to GenPro) ---------------------------
+- {name: "1KOMMA5°", ats: personio, id: "1komma5grad"}
+- {name: "Flexa", ats: personio, id: "flexa"}
+- {name: "Olmatic", ats: personio, id: "olmatic-gmbh"}
+- {name: "preisenergie", ats: personio, id: "preisenergie"}
+- {name: "Octopus Energy", ats: lever, id: "octoenergy"}
+- {name: "METYCLE", ats: personio, id: "metycle"}
+
+# --- Near Cologne / Freiburg / Stuttgart ---------------------------------
+- {name: "jupus (Cologne)", ats: ashby, id: "jupus"}
+- {name: "BLP Digital (Cologne)", ats: ashby, id: "blp-digital"}
+- {name: "Catapult / IMPECT (Cologne)", ats: greenhouse, id: "catapultsports"}
+- {name: "Speechify", ats: greenhouse, id: "speechify"}
+- {name: "Black Forest Labs (Freiburg)", ats: ashby, id: "black-forest-labs"}
+- {name: "Prior Labs (Freiburg)", ats: ashby, id: "prior-labs"}
+- {name: "Sereact (Stuttgart)", ats: ashby, id: "sereact"}
+- {name: "Applied Intuition (Stuttgart)", ats: ashby, id: "applied"}
+- {name: "leasingmarkt.de", ats: greenhouse, id: "leasingmarkt"}
+
+# --- AI / ML ----------------------------------------------------------------
+- {name: "QuantCo", ats: lever, id: "quantco-"}
+- {name: "DeepL", ats: ashby, id: "deepl"}
+- {name: "Celonis", ats: greenhouse, id: "celonis"}
+- {name: "Helsing", ats: greenhouse, id: "helsing"}
+- {name: "KONUX", ats: greenhouse, id: "konux"}
+- {name: "Sensmore", ats: ashby, id: "sensmore"}
+- {name: "Sunday Natural", ats: ashby, id: "sunday-natural"}
+- {name: "Cosuno", ats: ashby, id: "cosuno"}
+- {name: "Peec AI", ats: ashby, id: "peec"}
+- {name: "Tactilia Robotics", ats: ashby, id: "tactiliarobotics"}
+- {name: "Neural Concept", ats: ashby, id: "neuralconcept"}
+- {name: "SpAItial", ats: ashby, id: "spaitial"}
+- {name: "Air Apps", ats: ashby, id: "airapps"}
+- {name: "Quantum Diamonds", ats: ashby, id: "quantumdiamonds"}
+- {name: "Clera", ats: ashby, id: "clera"}
+- {name: "Smartly.io", ats: greenhouse, id: "smartlyio"}
+- {name: "Cresta", ats: greenhouse, id: "cresta"}
+- {name: "Lector.ai", ats: personio, id: "lector-ai"}
+- {name: "Certivity", ats: personio, id: "certivity"}
+- {name: "BIT Capital", ats: personio, id: "bitcap"}
+- {name: "Eraneos", ats: personio, id: "eraneos"}
+- {name: "Beroe", ats: personio, id: "beroe-inc"}
+- {name: "Wandelbots", ats: personio, id: "wandelbots"}
+- {name: "STARK", ats: personio, id: "stark"}
+
+# --- Fintech / product companies -----------------------------------------
+- {name: "N26", ats: greenhouse, id: "n26"}
+- {name: "SumUp", ats: greenhouse, id: "sumup"}
+- {name: "Grover", ats: greenhouse, id: "grover"}
+- {name: "HelloFresh", ats: greenhouse, id: "hellofresh"}
+- {name: "Wolt", ats: greenhouse, id: "wolt"}
+- {name: "A11", ats: greenhouse, id: "projectaservicesgmbhcokg"}
+- {name: "Nebius", ats: greenhouse, id: "nebius"}
+- {name: "Databricks", ats: greenhouse, id: "databricks"}
+- {name: "Qonto", ats: ashby, id: "qonto"}              # moved from Lever (Nov 2026)
+- {name: "FINN", ats: lever, id: "finn"}
+- {name: "freiheit.com", ats: lever, id: "freiheit-2"}
+- {name: "Netlight", ats: lever, id: "netlight"}
+- {name: "Xsolla", ats: lever, id: "xsolla"}
+- {name: "Apex.AI", ats: lever, id: "apex-ai"}
+- {name: "Qwello", ats: lever, id: "qwello.eu"}
+- {name: "Mendix", ats: lever, id: "mendix"}
+- {name: "Palantir", ats: lever, id: "palantir"}
+- {name: "Perplexity", ats: ashby, id: "perplexity"}
+- {name: "KAYAK", ats: ashby, id: "kayak"}
+
+# --- German Mittelstand / scale-ups on Personio --------------------------
+- {name: "truckoo", ats: personio, id: "truckoo-gmbh"}
+- {name: "F24", ats: personio, id: "f24"}
+- {name: "Lobster", ats: personio, id: "lobster-data-gmbh"}
+- {name: "Karla", ats: personio, id: "gokarla-gmbh"}
+- {name: "dive solutions", ats: personio, id: "dive-solutions-gmbh"}
+- {name: "polarise", ats: personio, id: "polarise"}
+- {name: "Ambrosys", ats: personio, id: "ambrosys"}
+- {name: "deeploi", ats: personio, id: "deeploi"}
+- {name: "EMIL Group", ats: personio, id: "emil-group-gmbh"}
+- {name: "baramundi", ats: personio, id: "baramundi-software-ag"}
+- {name: "Zertificon", ats: personio, id: "zertificon"}
+- {name: "Four 20 Pharma", ats: personio, id: "420pharma"}
+
+# --- Large companies -------------------------------------------------------
+- {name: "Bosch", ats: smartrecruiters, id: "BoschGroup"}
+# Eightfold careers sites (id = careers host; "host|domain" when the domain differs)
+- {name: "Ericsson", ats: eightfold, id: "jobs.ericsson.com"}
+- {name: "Vodafone", ats: eightfold, id: "jobs.vodafone.com"}
+- {name: "Qualcomm", ats: eightfold, id: "careers.qualcomm.com"}
+
+# --- From your list of 100 English-speaking employers -----------------
+- {name: "Aifano", ats: join, id: "aifano"}
+- {name: "Atmos", ats: join, id: "atmos-digital"}
+- {name: "Bonial", ats: recruitee, id: "bonial"}
+- {name: "Celus", ats: personio, id: "celus"}
+- {name: "Ecosia", ats: ashby, id: "ecosia.org"}
+- {name: "epay", ats: workable, id: "epay"}
+- {name: "Flaconi", ats: greenhouse, id: "flaconi"}
+- {name: "Flink", ats: smartrecruiters, id: "Flink3"}
+- {name: "Getsafe", ats: join, id: "hellogetsafe"}
+- {name: "Greenbone", ats: personio, id: "greenbone-ag"}
+- {name: "gridX", ats: personio, id: "gridx"}
+- {name: "Gymondo (7NXT)", ats: join, id: "7nxt"}
+- {name: "HelloBetter", ats: personio, id: "geton"}
+- {name: "HUMANoO", ats: personio, id: "humanoo"}
+- {name: "KoRo", ats: ashby, id: "koro"}               # moved from JOIN (Nov 2026)
+- {name: "Lovehoney Group", ats: lever, id: "lovehoneygroup"}
+- {name: "Markt Pilot", ats: lever, id: "markt-pilot"}
+- {name: "Meet5", ats: join, id: "meet5"}
+- {name: "n8n", ats: ashby, id: "n8n"}                 # moved from Workable (Nov 2026)
+- {name: "Raisin", ats: greenhouse, id: "raisin"}
+- {name: "Simi Reality Motion Systems", ats: join, id: "simi"}
+- {name: "SLAY", ats: join, id: "slay"}
+- {name: "sqanit", ats: join, id: "sqanit"}
+- {name: "Blinkist", ats: greenhouse, id: "blinkslabgmbh"}
+- {name: "epilot (Cologne)", ats: recruitee, id: "epilot"}
+- {name: "Eurowings Digital (Cologne)", ats: personio, id: "eurowings-digital"}
+- {name: "adjoe", ats: ashby, id: "adjoe"}
+- {name: "aiomatic", ats: join, id: "ai-omatic"}
+- {name: "Circunomics", ats: personio, id: "next-mobility-labs"}
+- {name: "DataGuard", ats: ashby, id: "dataguard"}
+- {name: "Crewmeister", ats: join, id: "crewmeister"}
+- {name: "Delivery Hero", ats: smartrecruiters, id: "DeliveryHero"}
+- {name: "DKB Code Factory", ats: greenhouse, id: "dkbcodefactory"}
+- {name: "Feather", ats: personio, id: "feather"}
+- {name: "ExoMatter", ats: join, id: "exomatter"}
+- {name: "Flix", ats: greenhouse, id: "flix"}
+- {name: "GetYourGuide", ats: ashby, id: "5dcfe507-5c82-4b61-a84e-47020a17f7dc"}   # moved from Greenhouse (Nov 2026)
+- {name: "Holidu", ats: ashby, id: "holidu"}
+- {name: "Isar Aerospace", ats: greenhouse, id: "isaraerospace"}
+- {name: "JustPlay", ats: ashby, id: "justplay-gmbh"}
+- {name: "justDice", ats: ashby, id: "justdice"}
+- {name: "justtrack", ats: join, id: "justtrack"}
+- {name: "JustWatch", ats: lever, id: "justwatch"}
+- {name: "Kaufland e-commerce (Cologne)", ats: personio, id: "real-digital"}
+- {name: "Kolibri Games", ats: lever, id: "kolibrigames"}
+- {name: "lemon.markets", ats: ashby, id: "lemon-markets"}
+- {name: "Magazino", ats: personio, id: "magazino"}
+- {name: "Munich Electrification", ats: ashby, id: "munich-electrification"}
+- {name: "Noah Labs", ats: join, id: "noah-labs"}
+- {name: "Nitrado", ats: join, id: "nitrado"}
+- {name: "MobiLab (Cologne)", ats: personio, id: "mobilab-solutions-gmbh"}   # moved from JOIN (Nov 2026)
+- {name: "Omio", ats: greenhouse, id: "omiocorp"}      # moved from SmartRecruiters (Nov 2026)
+- {name: "Ostrom (energy)", ats: ashby, id: "ostrom"}
+- {name: "Orbem", ats: ashby, id: "orbem"}
+- {name: "Parloa", ats: ashby, id: "parloa"}          # moved from Greenhouse (Nov 2026)
+- {name: "Doctolib", ats: ashby, id: "doctolib"}      # moved from Greenhouse (Nov 2026)
+- {name: "ARX Robotics", ats: greenhouse, id: "arxroboticsgmbh"}   # defence robotics, Munich (Nov 2026)
+- {name: "Payrails", ats: ashby, id: "payrails"}
+- {name: "peopleIX (Cologne)", ats: join, id: "peopleix"}
+- {name: "Scanbot (Bonn)", ats: join, id: "scanbot"}
+- {name: "SIDES", ats: personio, id: "sides"}
+- {name: "Picnic", ats: greenhouse, id: "teampicnic"}
+- {name: "The Exploration Company", ats: ashby, id: "the-exploration-company"}
+- {name: "Taxfix", ats: ashby, id: "taxfix.com"}
+- {name: "Whitebox (Freiburg)", ats: page, id: "https://www.whitebox.eu/karriere"}
+- {name: "trivago (Düsseldorf)", ats: greenhouse, id: "trivago"}
+- {name: "Zoi (Stuttgart)", ats: recruitee, id: "meet.zoi.tech"}
+- {name: "TrustYou", ats: join, id: "trustyounet"}
+- {name: "ticketbro", ats: join, id: "ticketbro"}
+- {name: "Zalando", ats: workday, id: "https://zalando.wd3.myworkdayjobs.com/ZalandoSiteWD"}
+- {name: "NVIDIA (Germany offices)", ats: workday, id: "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite"}
+
+# --- Companies found posting matching jobs in Oct 2026 ----------------
+- {name: "GESIS (Cologne, research)", ats: personio, id: "gesis"}
+- {name: "Omnisent", ats: join, id: "omnisent"}
+- {name: "CHAPTERS Group", ats: join, id: "chaptersgroupcom"}
+- {name: "Retorio", ats: join, id: "retoriocom"}
+- {name: "Evident (Hamburg)", ats: join, id: "evidentscientific"}
+- {name: "alago", ats: join, id: "alagoai"}
+- {name: "Alpas", ats: join, id: "alpas"}
+- {name: "dexter health", ats: join, id: "dexter-health"}
+- {name: "NAIRON", ats: join, id: "naironai"}
+- {name: "Caspar Health", ats: personio, id: "goreha"}
+- {name: "appliedAI", ats: personio, id: "appliedai"}
+- {name: "Bliro", ats: ashby, id: "bliro"}
+- {name: "Kimchi", ats: greenhouse, id: "kimchi"}
+- {name: "enshift (Düsseldorf, energy)", ats: join, id: "enshift"}
+- {name: "fion energy (energy forecasting)", ats: join, id: "fion-energycom"}
+- {name: "greenventory (Freiburg, energy)", ats: join, id: "greenventory"}
+- {name: "Kraken Tech (energy)", ats: ashby, id: "krakentech"}
+- {name: "1KOMMA5° (JOIN)", ats: join, id: "1komma5grad"}
+- {name: "airteam", ats: join, id: "airteam"}
+- {name: "Anori Tech", ats: join, id: "anoritechcom"}
+- {name: "Limatica", ats: join, id: "limaticacom"}
+- {name: "RIZM (energy optimisation)", ats: join, id: "rizm"}
+- {name: "Wayve", ats: ashby, id: "wayve"}
+- {name: "Qualysoft", ats: lever, id: "qualysoft"}
+- {name: "Positive Thinking Company (Stuttgart)", ats: join, id: "positivethinkingcompanytech"}
+- {name: "Dataciders", ats: personio, id: "dataciders"}
+- {name: "ADEAL Systems", ats: join, id: "adeal-systems"}
+- {name: "MILES Mobility", ats: join, id: "miles-mobility"}
+- {name: "iwoca (Berlin/Frankfurt)", ats: ashby, id: "iwoca.co.uk"}
+- {name: "Solaris", ats: greenhouse, id: "solarisbank"}
+- {name: "evoila (Frankfurt/Mainz)", ats: join, id: "evoila-ffm"}
+- {name: "citema systems", ats: join, id: "citema"}
+- {name: "hendricks IT (remote DE)", ats: join, id: "hendricksit"}
+- {name: "K-tronik", ats: join, id: "k-tronik"}
+- {name: "GeneralMind", ats: join, id: "generalmindcom"}
+- {name: "Springer Nature", ats: workday, id: "https://springernature.wd3.myworkdayjobs.com/SpringerNatureCareers"}
+- {name: "Airbus", ats: workday, id: "https://ag.wd3.myworkdayjobs.com/Airbus"}
+- {name: "diconium", ats: workday, id: "https://diconium.wd3.myworkdayjobs.com/diconium"}
+- {name: "Mimacom (Stuttgart)", ats: workday, id: "https://flowable.wd502.myworkdayjobs.com/mimacom"}
+- {name: "PayPal (Berlin)", ats: workday, id: "https://paypal.wd1.myworkdayjobs.com/jobs"}
